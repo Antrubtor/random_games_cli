@@ -21,8 +21,7 @@ def check_neighbour(board, x, y):
         for j in range(-1, 2):
             if (i == 0 and j == 0) or x + i < 0 or y + j < 0 or x + i >= board_size[0] or y + j >= board_size[1]:  # out of bounds
                 continue
-            if board[x + i][y + j] == 1:
-                count += 1
+            count += board[x + i][y + j]
     return count
 
 def update_board(board):
@@ -38,6 +37,7 @@ def update_board(board):
             else:
                 if count == 3:
                     new_board[i][j] = 1
+
     stuck = True
     for i in range(board_size[0]):
         for j in range(board_size[1]):
