@@ -10,7 +10,7 @@ if os.name == "posix":
     import termios
 
 board_size = (15, 30)
-speed = 0.03
+speed = 0.3
 
 class Square:
     def __init__(self, X, Y):
